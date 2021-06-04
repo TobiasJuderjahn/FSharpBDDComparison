@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <SatelliteResourceLanguages>en-US</SatelliteResourceLanguages>
+        <RootNamespace>FsharpBDDComparison</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="ncrontab.signed" Version="3.3.2" />
+        <PackageReference Include="Gherkin.TypeProvider" Version="0.1.10" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.1" />
+        <PackageReference Include="xunit" Version="2.4.1" />
+        <PackageReference Include="Xunit.Extensions.Ordering" Version="1.4.5" />
+        <PackageReference Include="Xunit.Gherkin.Quick" Version="4.1.0" />
+        <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+        </PackageReference>
+
+        <PackageReference Include="TickSpec" Version="2.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Include="Framework.fs" />
+        <Compile Include="Crontab.fs" />
+        <Compile Include="CrontabTests.GherkinProvider.fs" />
+        <Compile Include="CrontabTests.Xunit.fs" />
+        <Compile Include="CrontabTests.XunitGherkinQuick.fs" />
+        <Compile Include="CrontabTests.TickSpec.fs" />
+        <Compile Include="Features.fs" />
+        <Compile Include="AssemblyInfo.fs" />
+        <Content Include="README.md" />
+        <Content Include="Features\CrontabTests.feature" />
+        <EmbeddedResource Include="Features\*.feature" />
+    </ItemGroup>
+
+</Project>
