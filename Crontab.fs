@@ -21,8 +21,6 @@ let isRunning
 
     let lastStart = startSchedule.GetNextOccurrences(pointInTime.AddHours(-1.0 * maxStartedDurationHours), pointInTime) |> Seq.tryLast
     let lastStop = stopSchedule.GetNextOccurrences(pointInTime.AddHours(-1.0 * maxStoppedDurationHours), pointInTime) |> Seq.tryLast
-    //let nextStart = startSchedule.GetNextOccurrences(pointInTime, pointInTime.AddHours(maxStoppedDurationHours)) |> Seq.tryHead
-    //let nextStop = stopSchedule.GetNextOccurrences(pointInTime, pointInTime.AddHours(maxStartedDurationHours)) |> Seq.tryHead
 
     match lastStart, lastStop with
     | Some lastStart, Some lastStop ->
