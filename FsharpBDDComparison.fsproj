@@ -10,7 +10,8 @@
     <ItemGroup>
         <PackageReference Include="ncrontab.signed" Version="3.3.2" />
         <PackageReference Include="Gherkin.TypeProvider" Version="0.1.10" />
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.1" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
+        <PackageReference Include="TickSpec.xUnit" Version="2.0.2" />
         <PackageReference Include="xunit" Version="2.4.1" />
         <PackageReference Include="Xunit.Extensions.Ordering" Version="1.4.5" />
         <PackageReference Include="Xunit.Gherkin.Quick" Version="4.1.0" />
@@ -19,7 +20,6 @@
             <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
         </PackageReference>
 
-        <PackageReference Include="TickSpec" Version="2.0.1" />
     </ItemGroup>
 
     <ItemGroup>
