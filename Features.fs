@@ -2,7 +2,7 @@
 
 open System.Diagnostics
 open Xunit
-open FsharpBDDComparison.Framework.TickSpec
+open TickSpec.Xunit
 
 type Features() =
     static let source = AssemblyStepDefinitionsSource(System.Reflection.Assembly.GetExecutingAssembly())
@@ -11,5 +11,5 @@ type Features() =
     [<Theory; MemberData("scenarios", "FsharpBDDComparison.Features.CrontabTests.feature")>]
     member this.CrontabTests (scenario : XunitSerializableScenario) = 
         Debug.WriteLine(scenario.Name)
-        source.ScenarioAction(scenario).Invoke()
+        source.RunScenario(scenario)
    
